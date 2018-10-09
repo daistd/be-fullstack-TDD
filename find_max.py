@@ -13,8 +13,10 @@ def get_max_without_arguments():
     raise TypeError('Error cause no arguments')
 
 def get_max_with_one_argument(a):
-    pass
-
+    """
+        return that value
+    """
+    return a;
 
 def get_max_with_many_arguments(*args):
     pass
