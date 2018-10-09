@@ -1,6 +1,6 @@
 def get_max(a, b):
-    pass
-
+    if a>b: return a
+    else: return  b
 
 def get_max_without_arguments():
     pass
