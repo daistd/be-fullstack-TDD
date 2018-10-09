@@ -19,8 +19,14 @@ def get_max_with_one_argument(a):
     return a;
 
 def get_max_with_many_arguments(*args):
-    pass
-
+    """
+        return highest number among args
+    """
+    result = args[0]
+    for num in args:
+        if (num > result):
+            result = num
+    return result
 
 def get_max_with_one_or_more_arguments(first, *args):
     pass
