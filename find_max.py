@@ -1,10 +1,16 @@
 def get_max(a, b):
+    """
+        return max number among a and b
+    """
     if a>b: return a
-    else: return  b
+    else: return b
 
 def get_max_without_arguments():
-    pass
-
+    """
+        raise TypeError exception with message
+        The raise statement allows the programmer to force a specified exception to occur
+    """
+    raise TypeError('Error cause no arguments')
 
 def get_max_with_one_argument(a):
     pass
