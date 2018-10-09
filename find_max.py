@@ -46,7 +46,7 @@ def get_max_bounded(*args, low, high):
     for num in args:
         if (result <= low or result >= high):
             result = num
-        if (num > low and num < high and num > result):
+        if (low < num < high and num > result):
             result = num
     if (result > low and result < high):
         return result
@@ -54,7 +54,19 @@ def get_max_bounded(*args, low, high):
         return None
 
 def make_max(*, low, high):
+    """
+        return inner function object which takes at least one argument
+        and return highest number amount it's arguments, but if the
+        highest number is greater than the 'high' which given as required
+        argument the inner function has to return it.
+    """
     def inner(first, *args):
-        pass
-
+        result = first
+        for num in args:
+            if (result <= low or result >= high):
+                result = num
+            if (low < num < high and num > result):
+                result = num
+        if (result > low and result < high):
+            return result
     return inner
