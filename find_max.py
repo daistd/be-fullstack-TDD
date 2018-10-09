@@ -39,8 +39,19 @@ def get_max_with_one_or_more_arguments(first, *args):
     return result
 
 def get_max_bounded(*args, low, high):
-    pass
-
+    """
+        return highest number among args bounded by low & high
+    """
+    result = args[0]
+    for num in args:
+        if (result <= low or result >= high):
+            result = num
+        if (num > low and num < high and num > result):
+            result = num
+    if (result > low and result < high):
+        return result
+    else:
+        return None
 
 def make_max(*, low, high):
     def inner(first, *args):
