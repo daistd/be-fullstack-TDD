@@ -17,7 +17,7 @@ In any case, these are small explanations on these topics.
         def fun(cls, arg1, arg2, ...):
         ....
     ```
-    ***fun: function that needs to be converted into a class method
+    fun: function that needs to be converted into a class method
     returns: a class method for function.
     -A class method is a method which is bound to the class and not the object of the class.
     -They have the access to the state of the class as it takes a class parameter that points to the class and not the object instance.
@@ -26,6 +26,7 @@ In any case, these are small explanations on these topics.
 **Staticmethod:**
     A static method does not receive an implicit first argument.
     Syntax:
+    
     ```
     class C(object):
         @staticmethod
